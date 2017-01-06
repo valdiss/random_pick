@@ -10,3 +10,7 @@ li {
 .form {
   text-align: center;
 }
+
+#reset {
+  display: none;
+}

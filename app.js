@@ -11,7 +11,7 @@ let pick = [];
 let random = 0;
 
 button.addEventListener("click", function() {
-
+    button.innerHTML = "Reset";
     if (!nbr.value) {
         alert("Merci d'entrer un nombre d'élèves par groupes!");
     }
@@ -28,9 +28,17 @@ button.addEventListener("click", function() {
             }
 
             let li = document.createElement("li");
-            li.innerHTML = "Groupe n°" + j + ": " + pick.join(', ');
-            ul.appendChild(li);
-            j++;
+            if (nbr.value == 1){
+              li.innerHTML = "Passage n°" + j + ": " + pick.join(', ');
+              ul.appendChild(li);
+              j++;
+            }
+            else {
+              li.innerHTML = "Groupe n°" + j + ": " + pick.join(', ');
+              ul.appendChild(li);
+              j++;
+            }
+
         }
         if(eleves.length > 0){
           let last = document.querySelector("li:last-child");
@@ -38,4 +46,7 @@ button.addEventListener("click", function() {
           ul.style.border = '1px solid black';
         }
     }
+    button.addEventListener("click", function(){
+      window.location.reload();
+    });
 });

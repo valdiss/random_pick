@@ -4,13 +4,14 @@ let eleves = ["Sophie", "Alexandra", "Alice", "Camille", "César", "Elise", "Fel
     "Ryhad", "Samuel", "Seifeddine", "Sylvain", "Valentin"
 ];
 let body = document.querySelector("body");
+let form = document.querySelector("form");
 let button = document.getElementById('btn');
 let nbr = document.getElementById('nbr');
 let pick = [];
 let random = 0;
 
-button.addEventListener("click", function() {
-
+form.addEventListener("submit", function() {
+    event.preventDefault();
 
     eleves = ["Sophie", "Alexandra", "Alice", "Camille", "César", "Elise", "Felix", "Fodil",
         "Ibni-Yamine", "Jamil", "Jean-Jacques", "Jessica", "Jonathan",
@@ -21,8 +22,7 @@ button.addEventListener("click", function() {
 
     if (!nbr.value) {
         alert("Merci d'entrer un nombre d'élèves par groupes!");
-    } else if (nbr.value > 25) {
-        alert("Il n'y a que 25 élèves dans la promotion 3...");
+
     } else {
         button.innerHTML = "Nouveau tirage";
 
@@ -32,7 +32,7 @@ button.addEventListener("click", function() {
 
         let ul = document.createElement("ul");
         body.appendChild(ul);
-        
+
         let j = 1;
         while (eleves.length >= nbr.value) {
 
@@ -60,4 +60,5 @@ button.addEventListener("click", function() {
             last.innerHTML += ", " + eleves.join(', ');
         }
     }
+    nbr.value = "";
 });

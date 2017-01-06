@@ -2,15 +2,12 @@ li {
   margin: 20px auto;
 }
 
-#picked {
+ul {
   margin: 10px auto;
   width: 40%;
+  border: 1px solid black;
 }
 
 .form {
   text-align: center;
-}
-
-#reset {
-  display: none;
 }

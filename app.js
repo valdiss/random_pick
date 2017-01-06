@@ -3,23 +3,36 @@ let eleves = ["Sophie", "Alexandra", "Alice", "Camille", "César", "Elise", "Fel
     "Julien", "Kévin", "Laurène", "Linda", "Mario", "Mohamed", "Okba",
     "Ryhad", "Samuel", "Seifeddine", "Sylvain", "Valentin"
 ];
-
-let ul = document.getElementById('picked');
+let body = document.querySelector("body");
 let button = document.getElementById('btn');
-let reset = document.getElementById('reset');
 let nbr = document.getElementById('nbr');
 let pick = [];
 let random = 0;
 
 button.addEventListener("click", function() {
 
-    button.style.display = "none";
-    reset.style.display = "inline";
+
+    eleves = ["Sophie", "Alexandra", "Alice", "Camille", "César", "Elise", "Felix", "Fodil",
+        "Ibni-Yamine", "Jamil", "Jean-Jacques", "Jessica", "Jonathan",
+        "Julien", "Kévin", "Laurène", "Linda", "Mario", "Mohamed", "Okba",
+        "Ryhad", "Samuel", "Seifeddine", "Sylvain", "Valentin"
+    ];
+
+
     if (!nbr.value) {
         alert("Merci d'entrer un nombre d'élèves par groupes!");
     } else if (nbr.value > 25) {
         alert("Il n'y a que 25 élèves dans la promotion 3...");
     } else {
+        button.innerHTML = "Nouveau tirage";
+
+        if (document.querySelector('ul')) {
+            document.querySelector('ul').remove();
+        }
+
+        let ul = document.createElement("ul");
+        body.appendChild(ul);
+        
         let j = 1;
         while (eleves.length >= nbr.value) {
 
@@ -46,10 +59,5 @@ button.addEventListener("click", function() {
             let last = document.querySelector("li:last-child");
             last.innerHTML += ", " + eleves.join(', ');
         }
-        ul.style.border = '1px solid black';
     }
-});
-
-reset.addEventListener("click", function() {
-    window.location.reload();
 });

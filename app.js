@@ -44,7 +44,7 @@ form.addEventListener("submit", function() {
                 if ((eleves[random] == vener[0] && pick.includes(vener[1])) || (eleves[random] == vener[1] && pick.includes(vener[0]))) {
 
                     alert("Alerte! 3ème Guerre Mondiale en approche! Refaites un tirage pour le bien de l'humanité!");
-                    ul.remove();
+                    i--;
 
                 }
                 // else if ((eleves[random] == venertwo[0] && pick.includes(venertwo[1])) || (eleves[random] == venertwo[1] && pick.includes(venertwo[0]))) {

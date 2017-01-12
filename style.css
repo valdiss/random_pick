@@ -1,5 +1,10 @@
+body{
+  text-align: center;
+}
+
 li {
   margin: 20px auto;
+  text-align: left;
 }
 
 ul {
@@ -10,4 +15,8 @@ ul {
 
 .form {
   text-align: center;
+}
+
+p{
+  font-weight: bolder;
 }

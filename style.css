@@ -5,6 +5,10 @@ body{
   color: #D2D9D9;
 }
 
+h1 {
+  
+}
+
 label {
   color: #D2D9D9;
 }
@@ -13,7 +17,6 @@ li {
   margin: 15px auto;
   padding: 10px;
   text-align: left;
-  /*border-radius: 10px;*/
   background-color: white;
 }
 
@@ -26,6 +29,7 @@ ul {
   border-radius: 10px;
   background-color: #D9D9D9;
   list-style: none;
+  animation: fadeIn 1000ms;
 }
 
 .form {
@@ -36,4 +40,10 @@ ul {
 
 p{
   font-weight: bolder;
+  animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
 }

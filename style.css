@@ -6,7 +6,7 @@ body{
 }
 
 h1 {
-  
+
 }
 
 label {
@@ -40,7 +40,8 @@ ul {
 
 p{
   font-weight: bolder;
-  animation: fadeIn 500ms;
+  font-size: 1.5em;
+  /*animation: fadeIn 500ms;*/
 }
 
 @keyframes fadeIn {

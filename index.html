@@ -9,19 +9,20 @@
 </head>
 
 <body>
-  <h1>Tirage aléatoire des groupes de SimplonMars</h1>
-  <div class="row">
-    <form class="form col-sm-12">
-        <label for="nbr">Nombre d'élèves par groupe :</label>
-        <input id="nbr" type="number" name="nombre" value="" min="1" max="12" required>
-        <label for="checkbox">Prendre en compte les conflits:</label>
-        <input id ="checkbox" type="checkbox" name="name">
-        <button id="btn" type="submit" name="button">Randomize</button>
-    </form>
-  </div>
-  <div class="alert">
+    <h1>Tirage aléatoire des groupes de SimplonMars</h1>
+    <div class="row">
+        <form class="form col-sm-12">
+            <label for="nbr">Nombre d'élèves par groupe :</label>
+            <input id="nbr" type="number" name="nombre" value="" min="1" max="12" required>
+            <label for="checkbox">Prendre en compte les conflits:</label>
+            <input id="checkbox" type="checkbox" name="name">
+            <button id="btn" type="submit" name="button">Randomize</button>
+            <button id='tiragePrecedent' type="button" name="button">Tirage Précédent</button>
+        </form>
+    </div>
+    <div class="alert">
 
-  </div>
+    </div>
 
 
     <script src="app.js" charset="utf-8"></script>

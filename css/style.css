@@ -1,0 +1,100 @@
+body {
+    text-align: center;
+    height: 100vh;
+    background-color: #2E2E2E;
+    color: #D2D9D9;
+}
+
+header {
+    background-color: white;
+    height: 200px;
+    box-shadow: inset 0px -10px 15px -10px grey;
+}
+
+h1 {
+    color: #5E5E5E;
+    font-size: 2.5em;
+    line-height: 200px;
+    font-weight: bold;
+    font-family: Ubuntu, 'Open Sans', sans-serif;
+    text-shadow: 1px 1px #000;
+    margin: auto;
+}
+
+.red {
+    color: #f1285a;
+}
+
+.blue {
+    color: #639fb8;
+}
+
+label {
+    color: #D2D9D9;
+    font-size: 1.5em;
+}
+
+li {
+    margin: 15px auto;
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+}
+
+ul {
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    color: black;
+    font-size: 1vw;
+    border: 8px solid #1B1B1B;
+    border-radius: 10px;
+    background-color: #639fb8;
+    list-style: none;
+    animation: fadeIn 1000ms;
+}
+
+.form {
+    margin: 20px auto;
+    padding: 0;
+    color: #2E2E2E;
+}
+
+input:focus {
+    outline-color: #639fb8;
+}
+
+button {
+    padding: 7px 15px;
+    margin: 0px 5px;
+    border: 2px solid #1B1B1B;
+    border-radius: 5px;
+}
+
+button:hover, button:active {
+    border: 2px solid #639fb8;
+    background-color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+p {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url("../fonts/fontawesome-webfont.woff");
+}

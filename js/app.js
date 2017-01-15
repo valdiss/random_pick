@@ -266,13 +266,13 @@ form.addEventListener("submit", function() { //---------------------------------
             random = Math.floor(Math.random() * teams.length);
             if (nbr.value == 1) { //------------------------------------------------------condition pour changer le texte au début du groupe lorsque l'on demande des groupes de 1 personne
 
-                li.innerHTML = "Passage n°" + j + ": " + pick.join(', ');
+                li.innerHTML = "Passage n°" + j + ": " + pick.join(', ') + ".";
                 ul.appendChild(li);
                 j++;
 
             } else {
 
-                li.innerHTML = "Team " + teams[random] + " : " + pick.join(', ');
+                li.innerHTML = "Team " + teams[random] + " : " + pick.join(', ') + ".";
                 teams.splice(random, 1);
                 ul.appendChild(li);
                 j++;
@@ -281,6 +281,7 @@ form.addEventListener("submit", function() { //---------------------------------
         }
     } //---------------------------------------------------------------------------------Sortie du while
 });
+
 
 tiragePrecedent.addEventListener('click',function(){ //------------------------------------Lors d'un click sur le bouton "tirage Precedent"
   if (document.querySelector('ul')) {

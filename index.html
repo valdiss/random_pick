@@ -4,20 +4,29 @@
 <head>
     <meta charset="utf-8">
     <title>Random Picker</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Tirage aléatoire des groupes de SimplonMars</h1>
-    <div class="row">
-        <form class="form col-sm-12">
-            <label for="nbr">Nombre d'élèves par groupe :</label>
-            <input id="nbr" type="number" name="nombre" value="" min="1" max="12" required>
-            <label for="checkbox">Prendre en compte les conflits:</label>
-            <input id="checkbox" type="checkbox" name="name">
-            <button id="btn" type="submit" name="button">Randomize</button>
-            <button id='tiragePrecedent' type="button" name="button">Tirage Précédent</button>
+    <header>
+        <h1>Tir<span class="blue">a</span>ge <span class="blue">a</span>lé<span class="blue">a</span>t<span class="red">o</span>ire de<span class="blue">s</span> gr<span class="red">o</span>upe<span class="blue">s</span> de <img src="img/logosom.png" alt="" /></h1>
+    </header>
+
+    <div>
+        <form class="form">
+            <div class="form-group">
+                <label for="nbr">Nombre d'élèves par groupe :</label>
+                <input id="nbr" type="number" name="nombre" value="" min="1" max="12" required>
+            </div>
+            <div class="form-group">
+                <label for="checkbox">Prendre en compte les conflits:</label>
+                <input id="checkbox" type="checkbox" name="name">
+            </div>
+            <div class="form-group">
+                <button id="btn" type="submit" name="button">Randomize</button>
+                <button id='tiragePrecedent' type="button" name="button">Tirage Précédent</button>
+            </div>
         </form>
     </div>
     <div class="alert">
@@ -25,7 +34,7 @@
     </div>
 
 
-    <script src="app.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
 </body>
 
 </html>

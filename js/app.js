@@ -25,7 +25,7 @@ let p = document.createElement("p"); //-----------------------------------------
 alert.appendChild(p); //------------------------------------------------------------------Même concept, on ne l'intègre ainsi qu'une fois dans le DOM
 
 
-form.addEventListener("submit", function() { //--------------------------------------------Ici on écoute sur un submit, ainsi nous pouvons donner des règles à l'input ainsi que faire un tirage en appuyant sur la touche 'entrer'
+form.addEventListener("submit", function(event) { //--------------------------------------------Ici on écoute sur un submit, ainsi nous pouvons donner des règles à l'input ainsi que faire un tirage en appuyant sur la touche 'entrer'
     event.preventDefault(); //------------------------------------------------------------on empêche le submit de recharger la page
     nombre = nbr.value; //----------------------------------------------------------------la variable est juste là pour que l'utilisateur ne crois pas à un bug en changeant directement nbr.value
 
